@@ -4,6 +4,11 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
+    
+        "builds": [
+          { "src": "Dockerfile", "use": "@vercel/docker" }
+        ],
+      
     "routes": [
         { "src": "/(.*)", "dest": "/api/index.php" }],
     "public": true,
