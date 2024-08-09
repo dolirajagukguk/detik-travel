@@ -3,11 +3,13 @@
     "framework": null,
     
         "builds": [
-          { "src": "Dockerfile", "use": "@vercel/docker" }
-        ],
+    { "src": "public/index.php", "use": "@vercel/php" }
+  ],
       
     "routes": [
         { "src": "/(.*)", "dest": "/api/index.php" }],
+
+        
     "public": true,
     "buildCommand": "vite build",
     "outputDirectory": "public",
