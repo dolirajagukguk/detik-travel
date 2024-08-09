@@ -1,16 +1,20 @@
 {
-    "version": 2,
-    "framework": null,
-    
-    
-        "builds": [
-          { "src": "Dockerfile", "use": "@vercel/docker" }
-        ],
-      
-      
-    "routes": [
-        { "src": "/(.*)", "dest": "/public/index.php" }],
-
+   "version": 2,
+  "builds": [
+    {
+      "src": "Dockerfile",
+      "use": "@vercel/docker",
+      "config": {
+        "dockerCommand": "/usr/sbin/apache2ctl -D FOREGROUND"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
         
     "public": true,
     "buildCommand": "vite build",
