@@ -1,10 +1,11 @@
 {
-    "version": 2,
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
+  "version": 2,
+  "builds": [
+    {
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/build/(.*)",
@@ -16,8 +17,6 @@
     }
   ],
     "public": true,
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
