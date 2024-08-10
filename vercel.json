@@ -16,16 +16,16 @@
     "buildCommand": "vite build",
     "outputDirectory": "public",
     "env": {
-        "APP_ENV": "local",
-        "APP_DEBUG": "true",
-        "APP_URL": "http://localhost",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://detik-travel-doli.vercel.app",
         "APP_KEY": "base64:0a7N3BTZPYYtK5zINwp5FV6+GMWhgTtXvaPG4RWHPxs=",
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
+        "APP_CONFIG_CACHE": "storage/framework/cache/config.php",
+        "APP_EVENTS_CACHE": "storage/framework/cache/events.php",
+        "APP_PACKAGES_CACHE": "storage/framework/cache/packages.php",
+        "APP_ROUTES_CACHE": "storage/framework/cache/routes.php",
+        "APP_SERVICES_CACHE": "storage/framework/cache/services.php",
+        "VIEW_COMPILED_PATH": "storage/framework/views",
         "CACHE_DRIVER": "file",
         "LOG_CHANNEL": "stack",
         "SESSION_DRIVER": "cookie",
@@ -33,6 +33,7 @@
         "DB_HOST": "127.0.0.1",
         "DB_PORT": "3306",
         "DB_DATABASE": "laravel",
-        "DB_USERNAME": "root"
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": ""
     }
 }
