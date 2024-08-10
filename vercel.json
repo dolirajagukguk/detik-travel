@@ -1,39 +1,11 @@
 {
-    "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "Dockerfile",
-      "use": "@vercel/docker"
+      "source": "/(.*)",
+      "destination": "/"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
-    }
-  ],
-    "public": true,
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
-    "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_URL": "https://detik-travel-doli.vercel.app",
-        "APP_KEY": "base64:0a7N3BTZPYYtK5zINwp5FV6+GMWhgTtXvaPG4RWHPxs=",
-        "APP_CONFIG_CACHE": "storage/framework/cache/config.php",
-        "APP_EVENTS_CACHE": "storage/framework/cache/events.php",
-        "APP_PACKAGES_CACHE": "storage/framework/cache/packages.php",
-        "APP_ROUTES_CACHE": "storage/framework/cache/routes.php",
-        "APP_SERVICES_CACHE": "storage/framework/cache/services.php",
-        "VIEW_COMPILED_PATH": "storage/framework/views",
-        "CACHE_DRIVER": "file",
-        "LOG_CHANNEL": "stack",
-        "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "127.0.0.1",
-        "DB_PORT": "3306",
-        "DB_DATABASE": "laravel",
-        "DB_USERNAME": "root",
-        "DB_PASSWORD": ""
-    }
+  ]
 }
+
+
+
